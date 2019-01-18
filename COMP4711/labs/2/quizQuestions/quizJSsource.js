@@ -1,13 +1,14 @@
-let btn1 = document.createElement("BUTTON");
-document.body.appendChild(btn1);
-btn1.innerHTML = 'Show other buttons';
+var number;
+var askNumberOfQuestions = prompt("Enter number of questions you want to answer.");
+if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
+    
+} else {
+    showButtons(number);
+}
 
-btn1.onclick = function(){showButtons()};
+function showButtons(n){
 
-function showButtons(){
-var zeroToFive = 5;
-
-    for(let i = 1; i <= zeroToFive; i++){
+    for(let i = 1; i <= n; i++){
         let btn = document.createElement("BUTTON");
         document.body.appendChild(btn);
         btn.innerHTML = 'test value';
