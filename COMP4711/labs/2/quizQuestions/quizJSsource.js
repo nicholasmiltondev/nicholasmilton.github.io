@@ -1,9 +1,8 @@
-var number;
-var askNumberOfQuestions = prompt("Enter number of questions you want to answer.");
+var askNumberOfQuestions = prompt("Enter number of questions you want to answer.", "Enter a number");
 if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
     
 } else {
-    showButtons(number);
+    showButtons(askNumberOfQuestions);
 }
 
 function showButtons(n){
