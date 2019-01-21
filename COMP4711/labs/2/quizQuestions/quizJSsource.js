@@ -3,7 +3,7 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
     
 } else {
     fetch().then(function(resp){
-        return resp.json();
+        return resp.json("https://raw.githubusercontent.com/nicholasmiltondev/nicholasmiltondev.github.io/master/COMP4711/labs/2/quizQuestions/quiz.json");
     }).then(function(data){
         showButtons(askNumberOfQuestions, data);
     });
