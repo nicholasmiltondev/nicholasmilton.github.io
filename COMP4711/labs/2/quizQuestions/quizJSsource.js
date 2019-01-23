@@ -5,14 +5,22 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
     fetch("https://raw.githubusercontent.com/nicholasmiltondev/nicholasmiltondev.github.io/master/COMP4711/labs/2/quizQuestions/quiz.json").then(function(resp){
         return resp.json();
     }).then(function(data){
-        for(let i = 1; i < askNumberOfQuestions + 1; i++){
-            document.body.innerHTML(data.quiz[i].q);
+        for(let i = 0; i < askNumberOfQuestions; i++){
+            var x = document.createElement("P");
+            var t = document.createTextNode(data.quiz[i].q);
+            x.appendChild(t);
+            document.body.appendChild(x);
+            let k = 0;
             for(j in data.quiz[i].options){
                 let rbutton = document.createElement("input");
                 rbutton.type = "radio";
                 rbutton.name = "options" + i;
                 document.body.appendChild("options" + i);
-                document.body.innerHTML(j);
+                
+                var x = document.createElement("P");
+                var t = document.createTextNode(data.quiz[i].options[k]);
+                x.appendChild(t);
+                document.body.appendChild(x);
             }
         }
         for(let j = 0; j < 26; j++){
