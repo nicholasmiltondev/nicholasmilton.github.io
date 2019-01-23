@@ -5,11 +5,11 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
     fetch("https://raw.githubusercontent.com/nicholasmiltondev/nicholasmiltondev.github.io/master/COMP4711/labs/2/quizQuestions/quiz.json").then(function(resp){
         return resp.json();
     }).then(function(data){
-        // for(let i = 0; i < askNumberOfQuestions; i++){
-        //     var x = document.createElement("P");
-        //     var t = document.createTextNode("works" + i);
-        //     x.appendChild(t);
-        //     document.body.appendChild(x);
+         for(let i = 0; i < askNumberOfQuestions; i++){
+             var x = document.createElement("P");
+             var t = document.createTextNode("works" + i);
+             x.appendChild(t);
+             document.body.appendChild(x);
 
         //     let k = 0;
         //     for(j in data.quiz[i].options){
@@ -23,7 +23,7 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
         //         x.appendChild(t);
         //         document.body.appendChild(x);
         //     }
-        // }
+         }
         for(let j = 0; j < 26; j++){
             let inputAlphabet = document.createElement("input");
             document.body.appendChild(inputAlphabet);
