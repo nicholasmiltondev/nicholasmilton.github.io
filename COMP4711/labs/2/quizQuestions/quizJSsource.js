@@ -5,10 +5,15 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
     fetch("https://raw.githubusercontent.com/nicholasmiltondev/nicholasmiltondev.github.io/master/COMP4711/labs/2/quizQuestions/quiz.json").then(function(resp){
         return resp.json();
     }).then(function(data){
-        for(let i = 1; i <= askNumberOfQuestions; i++){
-            let btn = document.createElement("BUTTON");
-            document.body.appendChild(btn);
-            btn.innerHTML = data.buttons[i];
+        for(let i = 1; i < askNumberOfQuestions + 1; i++){
+            document.body.innerHTML(data.quiz[i].q);
+            for(j in data.quiz[i].options){
+                let rbutton = document.createElement("input");
+                rbutton.type = "radio";
+                rbutton.name = "options" + i;
+                document.body.appendChild("options" + i);
+                document.body.innerHTML(j);
+            }
         }
         for(let j = 0; j < 26; j++){
             let inputAlphabet = document.createElement("input");
