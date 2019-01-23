@@ -8,8 +8,7 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
         for(let i = 1; i <= askNumberOfQuestions; i++){
             let btn = document.createElement("BUTTON");
             document.body.appendChild(btn);
-            btn.innerHTML = i;
-            //btn.innerHTML = data[i].buttons;
+            btn.innerHTML = data.buttons[i];
         }
     });    
 }
