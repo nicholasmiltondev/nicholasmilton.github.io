@@ -19,8 +19,8 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
         }
     }); 
     
-    function alertAlpha(){
+    function alertAlpha(click){
         console.log("alertAlpha", arguments);
-        alert("works");
+        alert(click.target.value);
     }
 }
