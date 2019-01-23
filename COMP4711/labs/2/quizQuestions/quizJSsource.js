@@ -12,6 +12,7 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
         }
         for(let j = 0; j <= 26; j++){
             let inputAlphabet = document.createElement("input");
+            document.body.appendChild(inputAlphabet);
             inputAlphabet.setAttribute("type", "button");
             inputAlphabet.setAttribute("value", data.alphabet[j]);
         }
