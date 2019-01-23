@@ -15,7 +15,11 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
             document.body.appendChild(inputAlphabet);
             inputAlphabet.type = "button";
             inputAlphabet.setAttribute("value", data.alphabet[j]);
-            inputAlphabet.onclick = "alert(inputAlphabet.value)";
+            inputAlphabet.onclick = "alertAlpha()";
         }
-    });    
+    }); 
+    
+    function alertAlpha(){
+        alert("works " + this.value);
+    }
 }
