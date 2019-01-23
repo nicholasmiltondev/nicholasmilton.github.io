@@ -10,5 +10,10 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
             document.body.appendChild(btn);
             btn.innerHTML = data.buttons[i];
         }
+        for(let j = 0; j <= 26; j++){
+            let inputAlphabet = document.createElement("input");
+            inputAlphabet.setAttribute("type", "button");
+            inputAlphabet.setAttribute("value", data.alphabet[j]);
+        }
     });    
 }
