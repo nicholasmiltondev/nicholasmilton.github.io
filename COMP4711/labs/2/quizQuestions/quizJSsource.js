@@ -7,9 +7,10 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
     }).then(function(data){
         for(let i = 0; i < askNumberOfQuestions; i++){
             var x = document.createElement("P");
-            var t = document.createTextNode(data.quiz[i].q);
+            var t = document.createTextNode("works" + i);
             x.appendChild(t);
             document.body.appendChild(x);
+
             let k = 0;
             for(j in data.quiz[i].options){
                 let rbutton = document.createElement("input");
@@ -18,7 +19,7 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
                 document.body.appendChild("options" + i);
                 
                 var x = document.createElement("P");
-                var t = document.createTextNode(data.quiz[i].options[k]);
+                var t = document.createTextNode("works");
                 x.appendChild(t);
                 document.body.appendChild(x);
             }
