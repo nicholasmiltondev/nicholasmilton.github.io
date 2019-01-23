@@ -7,7 +7,7 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
     }).then(function(data){
          for(let i = 0; i < askNumberOfQuestions; i++){
              var x = document.createElement("P");
-             x.innerHTML(data.quiz[i].q);
+             x.innerHTML = data.quiz[i].q;
              document.body.appendChild(x);
 
         //     let k = 0;
