@@ -22,7 +22,7 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
                 // t.innerHTML = j;
                 // document.body.appendChild(t);
                 var z = document.createElement("P");
-                z.innerHTML = "works";
+                z.innerHTML = data.quiz[i].options[j];
                 document.body.appendChild(z);
             }
          }
