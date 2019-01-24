@@ -11,16 +11,16 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
              x.innerHTML = data.quiz[i].q;
              document.body.appendChild(x);
 
-            //let k = 0;
             for(j in data.quiz[i].options){
+                let b = document.createElement("DIV");
                 let rbutton = document.createElement("input");
                 rbutton.type = "radio";
                 rbutton.name = "options" + i;
-                document.body.appendChild(rbutton);
+                b.appendChild(rbutton);
                 
-                var z = document.createElement("P");
+                var z = document.createElement("label");
                 z.innerHTML = data.quiz[i].options[j];
-                document.body.appendChild(z);
+                b.appendChild(z);
             }
          }
         for(let j = 0; j < 26; j++){
