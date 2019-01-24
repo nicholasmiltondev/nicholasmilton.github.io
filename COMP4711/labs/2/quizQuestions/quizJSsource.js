@@ -5,11 +5,12 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
     fetch("https://raw.githubusercontent.com/nicholasmiltondev/nicholasmiltondev.github.io/master/COMP4711/labs/2/quizQuestions/quiz.json").then(function(resp){
         return resp.json();
     }).then(function(data){
+        console.log(data);
          for(let i = 0; i < askNumberOfQuestions; i++){
              var x = document.createElement("P");
-             x.innerHTML = data.quiz[i];
+             x.innerHTML = "works";
              document.body.appendChild(x);
-
+            //console.log();
         //     let k = 0;
         //     for(j in data.quiz[i].options){
         //         let rbutton = document.createElement("input");
