@@ -9,7 +9,7 @@
         "answer":"a"} ,
 
         {"q":"Q3. How do you use a method on an object?", 
-        "options":[" a) Call the method and place the object inside the parenthesis: reverse(myarray) b) Call the object followed by a punctuation mark, then call the method: myarray.reverse", " c) Call the object followed by a punctuation mark, then call the method ending with parenthesis: myarray.reverse()", " d) Call the method followed by a punctuation mark, then call the object: reverse.myarray"], 
+        "options":[" a) Call the method and place the object inside the parenthesis: reverse(myarray) ",  "b) Call the object followed by a punctuation mark, then call the method: myarray.reverse", " c) Call the object followed by a punctuation mark, then call the method ending with parenthesis: myarray.reverse()", " d) Call the method followed by a punctuation mark, then call the object: reverse.myarray"], 
         "answer":"a"} ,
 
         {"q":"Q4. Immediately invoked function expressions ________.", 

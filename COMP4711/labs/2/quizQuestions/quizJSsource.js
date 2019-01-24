@@ -10,19 +10,17 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
              var x = document.createElement("P");
              x.innerHTML = data.quiz[i].q;
              document.body.appendChild(x);
-            //console.log();
-        //     let k = 0;
-        //     for(j in data.quiz[i].options){
-        //         let rbutton = document.createElement("input");
-        //         rbutton.type = "radio";
-        //         rbutton.name = "options" + i;
-        //         document.body.appendChild("options" + i);
+            let k = 0;
+            for(j in data.quiz[i].options){
+                let rbutton = document.createElement("input");
+                rbutton.type = "radio";
+                rbutton.name = "options" + i;
+                document.body.appendChild("options" + i);
                 
-        //         var x = document.createElement("P");
-        //         var t = document.createTextNode("works");
-        //         x.appendChild(t);
-        //         document.body.appendChild(x);
-        //     }
+                var t = document.createElement("P");
+                x.innerHTML = data.quiz[i].options[k];
+                document.body.appendChild(x);
+            }
          }
         for(let j = 0; j < 26; j++){
             let inputAlphabet = document.createElement("input");
