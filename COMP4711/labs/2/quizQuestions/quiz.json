@@ -18,7 +18,5 @@
 
         {"q":"Q5. What will document.querySelectorAll([query selectors]} return?", 
         "options":[" a) an HTML Nodelist containing all the document nodes matching the specified query selector ", " b) the first node matching all the specified query selectors ", " c) one element for each of the specified query selectors "], 
-        "answer":"a"}],
-
-    "alphabet": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+        "answer":"a"}]
 }

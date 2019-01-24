@@ -24,17 +24,5 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
                 b.appendChild(z);
             }
          }
-        for(let j = 0; j < 26; j++){
-            let inputAlphabet = document.createElement("input");
-            document.body.appendChild(inputAlphabet);
-            inputAlphabet.type = "button";
-            inputAlphabet.setAttribute("value", data.alphabet[j]);
-            inputAlphabet.onclick = alertAlpha;
-        }
     }); 
-    
-    function alertAlpha(click){
-        console.log("alertAlpha", arguments);
-        alert(click.target.value);
-    }
 }
