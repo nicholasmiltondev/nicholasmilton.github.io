@@ -16,7 +16,7 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
                 let rbutton = document.createElement("input");
                 rbutton.type = "radio";
                 rbutton.name = "options" + i;
-                document.body.appendChild("options" + i);
+                document.body.appendChild(rbutton);
                 
                 var t = document.createElement("P");
                 t.innerHTML = j;
