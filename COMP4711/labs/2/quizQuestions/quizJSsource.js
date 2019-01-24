@@ -13,6 +13,7 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
 
             for(j in data.quiz[i].options){
                 let b = document.createElement("DIV");
+                document.body.appendChild(b);
                 let rbutton = document.createElement("input");
                 rbutton.type = "radio";
                 rbutton.name = "options" + i;
