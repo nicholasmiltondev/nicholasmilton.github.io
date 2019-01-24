@@ -10,7 +10,8 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
              var x = document.createElement("P");
              x.innerHTML = data.quiz[i].q;
              document.body.appendChild(x);
-            let k = 0;
+
+            //let k = 0;
             for(j in data.quiz[i].options){
                 let rbutton = document.createElement("input");
                 rbutton.type = "radio";
@@ -18,8 +19,8 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
                 document.body.appendChild("options" + i);
                 
                 var t = document.createElement("P");
-                x.innerHTML = data.quiz[i].options[k];
-                document.body.appendChild(x);
+                t.innerHTML = j;
+                document.body.appendChild(t);
             }
          }
         for(let j = 0; j < 26; j++){
