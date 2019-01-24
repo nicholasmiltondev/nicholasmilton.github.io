@@ -13,14 +13,11 @@ if(askNumberOfQuestions == null || askNumberOfQuestions == ""){
 
             //let k = 0;
             for(j in data.quiz[i].options){
-                // let rbutton = document.createElement("input");
-                // rbutton.type = "radio";
-                // rbutton.name = "options" + i;
-                // document.body.appendChild(rbutton);
+                let rbutton = document.createElement("input");
+                rbutton.type = "radio";
+                rbutton.name = "options" + i;
+                document.body.appendChild(rbutton);
                 
-                // var t = document.createElement("P");
-                // t.innerHTML = j;
-                // document.body.appendChild(t);
                 var z = document.createElement("P");
                 z.innerHTML = data.quiz[i].options[j];
                 document.body.appendChild(z);
