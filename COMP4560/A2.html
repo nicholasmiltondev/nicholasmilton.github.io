@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>COMP4560 Assignment 2</h1>
+
+<canvas id='c' style = 'position: absolute; left: 0px; top: 0px;' >
+</canvas>
+
+<script>
+  (function() {
+    var 
+      // Obtain a reference to the canvas element
+      // using its id.
+      windowCanvas = document.getElementById('c'),
+    
+        // Obtain a graphics context on the
+        // canvas element for drawing.
+        context = windowCanvas.getContext('2d');
+      
+
+    // Start listening to resize events and
+    // draw canvas.
+    initialize();
+
+    function initialize() {
+      // Register event listeners to
+      // call the resizeWindow() function each time the window is resized, 
+      window.addEventListener('resize', resizeWindow, false);
+      
+      // Draw background and circles for the first time.
+      // ie, call the appropriate function(s) here.
+              redraw();
+    }
+      
+          
+    function redraw() {
+      
+      // This function is called at initialization, and when the window is resized
+      // *** Your code for drawing the circles goes here *** 
+      // Hints: 
+      // 1. The height of your window is window.innerHeight, and its width is window.innerWidth.
+      // 2. The following code creates a solid circle of colour 'colourname', centred at (x,y) in screen coordinates, and with radius r:
+            context.fillStyle='colour';
+            context.beginPath();
+            context.arc(x, y, r, 0, 2 * Math.PI);
+            context.closePath();
+            context.fill();
+  
+    }
+  
+    function resizeWindow() 
+    // Runs each time the window is resized.
+    // Resets the canvas dimensions to match window, then redraws the background and circles.
+    {
+      windowCanvas.width = window.innerWidth;
+      windowCanvas.height = window.innerHeight;
+      redraw();
+    }
+    
+    
+  })();
+</script>
+
+</body>
+</html>
