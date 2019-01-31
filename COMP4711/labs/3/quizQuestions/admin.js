@@ -2,7 +2,7 @@ function addQuestion() {
     // Check local storage.
     if (typeof (Storage) !== "undefined") {
         // If exists, increment by 1.
-        if (localStorage.clickcount) {
+        if (localStorage.clickcount && localStorage.clickcount>=0) {
             localStorage.clickcount = Number(localStorage.clickcount) + 1;
         } else {
             localStorage.clickcount = 0;
@@ -66,7 +66,10 @@ function clearStorage() {
 
 function savePage() {
     let num = localStorage.getItem("clickcount");
-    for (let k = 0; k < num; k++) {
+    if(num==null)
+        return;
+    for (let k = 0; k <= num; k++ ) {
+        debugger;
         localStorage.setItem('question' + k, document.getElementById('question' + k).value);
         for (let m = 0; m < 4; m++) {
             localStorage.setItem('option' + k + 'a' + m, document.getElementById('option' + k + 'a' + m).checked);
@@ -80,7 +83,9 @@ function displaySavedQuestions() {
     if (typeof (Storage) !== "undefined") {
         // find current number to name question.
         let num = localStorage.getItem("clickcount");
-        for (let t = 0; t < num; t++) {
+        if(num==null)
+            return;
+        for (let t = 0; t <= num; t++) {
             // Create div to hold Q&A.
             let d = document.createElement("div");
             d.id = "div" + t;

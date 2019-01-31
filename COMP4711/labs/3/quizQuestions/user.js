@@ -2,7 +2,9 @@ function displaySavedQuestions() {
     if (typeof (Storage) !== "undefined") {
         // find current number to name question.
         let num = localStorage.getItem("clickcount");
-        for (let t = 0; t < num; t++) {
+        if (num == null)
+            return;
+        for (let t = 0; t <= num; t++) {
             // Create div to hold Q&A.
             let d = document.createElement("div");
             d.id = "div" + t;
@@ -39,16 +41,18 @@ function displaySavedQuestions() {
 function markQuiz() {
     let score = 0;
     let num = localStorage.getItem("clickcount");
-    for (let t = 0; t < num; t++) {
+    if (num == null)
+        return;
+    for (let t = 0; t <= num; t++) {
         for (let i = 0; i < 4; i++) {
             if (document.getElementById('option' + t + 'a' + i).checked)
                 document.getElementById('div' + t + 'a' + i).style.backgroundColor = "red";
-            if(localStorage.getItem("option" + t + "a" + i) === "true"){
+            if (localStorage.getItem("option" + t + "a" + i) === "true") {
                 document.getElementById('div' + t + 'a' + i).style.backgroundColor = "green";
-                if(document.getElementById('option' + t + 'a' + i).checked)
+                if (document.getElementById('option' + t + 'a' + i).checked)
                     score++;
             }
         }
     }
-    document.getElementById("finalScore").innerHTML="You got " + score + " out of " + num + "!";
+    document.getElementById("finalScore").innerHTML = "You got " + score + " out of " + (parseInt(num) + 1) + "!";
 }
