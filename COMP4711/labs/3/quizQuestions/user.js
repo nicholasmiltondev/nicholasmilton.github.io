@@ -5,7 +5,9 @@ function displaySavedQuestions() {
         for (let t = 0; t < num; t++) {
             // Create div to hold Q&A.
             let d = document.createElement("div");
-            document.body.appendChild(d);
+            d.id = "div" + t;
+            if (localStorage.getItem("div" + t) != "skip")
+                document.body.appendChild(d);
             // Create blank textbox for question.
             let inputQuestion = document.createElement("p");
             inputQuestion.innerHTML = localStorage.getItem("question" + t);

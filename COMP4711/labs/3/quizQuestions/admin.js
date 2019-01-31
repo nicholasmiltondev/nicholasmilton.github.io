@@ -39,6 +39,12 @@ function addQuestion() {
             inputAnswer.placeholder = "Enter an answer";
             qd.appendChild(inputAnswer);
         }
+        let dButton = document.createElement("input");
+        d.appendChild(dButton);
+        dButton.type = "button";
+        dButton.setAttribute("value", num);
+        dButton.innerHTML="Delete";
+        dButton.onclick = deleteQuestion;
     }
 }
 
@@ -66,7 +72,9 @@ function displaySavedQuestions() {
         for (let t = 0; t < num; t++) {
             // Create div to hold Q&A.
             let d = document.createElement("div");
-            document.body.appendChild(d);
+            d.id = "div" + t;
+            if (localStorage.getItem("div" + t) != "skip")
+                document.body.appendChild(d);
             // Create blank textbox for question.
             let inputQuestion = document.createElement("input");
             inputQuestion.type = "text";
@@ -93,6 +101,18 @@ function displaySavedQuestions() {
                 inputAnswer.value = localStorage.getItem("answer" + t + "a" + i);
                 qd.appendChild(inputAnswer);
             }
+            let dButton = document.createElement("input");
+            d.appendChild(dButton);
+            dButton.type = "button";
+            dButton.setAttribute("value", t);
+            dButton.innerHTML="Delete";
+            dButton.onclick = deleteQuestion;
         }
     }
+}
+
+function deleteQuestion(click) {
+    let y = click.target.value;
+    localStorage.setItem("div" + y, "skip");
+    location.reload();
 }
