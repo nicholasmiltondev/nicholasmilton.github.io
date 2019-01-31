@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <script type="text/javascript" src="admin.js"></script>
+            <script type="text/javascript" src="user.js"></script>
+        <link rel="stylesheet" type="text/css" href="user.css">
     </head>
 <body onload="displaySavedQuestions()">
-<h1>Quiz 3: Admin</h1>
+<h1>Quiz 3: User</h1>
 <ul>
     <li><a href="https://nicholasmiltondev.github.io/">Home</a></li>
     <li><a href="https://nicholasmiltondev.github.io/COMP4711/COMP4711.html">COMP4711</a></li>
 </ul>
-
-  <button onclick="addQuestion()" type="button">Add new question</button>
-    <button onclick="clearStorage()" type="button">Clear storage and page</button>
-    
+    <button onclick="markQuiz()" type="button">Mark Quiz!</button>
   <button onclick="location.href='https://nicholasmiltondev.github.io/'" type="button">
         Back to main</button>
-    <button onclick="savePage()" type="button">Save</button>
+    <p id="finalScore"></p>
 
 </body>
 </html>
